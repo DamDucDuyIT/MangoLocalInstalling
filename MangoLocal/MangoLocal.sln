@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangoLocal", "MangoLocal.csproj", "{8CD42094-1E07-4E55-8C69-78462112337B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MangoLocalSofware", "..\MangoLocalSofware\MangoLocalSofware.vdproj", "{C14BD40F-624E-4A74-BBF8-4A0E9D0FF31F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CD42094-1E07-4E55-8C69-78462112337B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD42094-1E07-4E55-8C69-78462112337B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD42094-1E07-4E55-8C69-78462112337B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD42094-1E07-4E55-8C69-78462112337B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C14BD40F-624E-4A74-BBF8-4A0E9D0FF31F}.Debug|Any CPU.ActiveCfg = Release
+		{C14BD40F-624E-4A74-BBF8-4A0E9D0FF31F}.Debug|Any CPU.Build.0 = Release
+		{C14BD40F-624E-4A74-BBF8-4A0E9D0FF31F}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAC8C427-B867-4BCB-8025-201E5FF7B623}
+	EndGlobalSection
+EndGlobal

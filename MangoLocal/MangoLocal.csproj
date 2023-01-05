@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Update="aaa.ps1">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="ENRICHRCP.mdf">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="ENRICHRCP_log.ldf">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="POSCenter_log.ldf">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="POSLocal.mdf">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="POSLocal_log.ldf">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+  <ItemGroup>
+    <Content Include="BackEndLocal\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Cake.Powershell" Version="1.0.1" />
+		<PackageReference Include="Dapper" Version="2.0.123" />
+		<PackageReference Include="Dotmim.Sync.Core" Version="0.9.7" />
+		<PackageReference Include="Dotmim.Sync.SqlServer" Version="0.9.7" />
+		<PackageReference Include="Dotmim.Sync.SqlServer.ChangeTracking" Version="0.9.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+		<PackageReference Include="Microsoft.SyncFramework" Version="2.1.0.2" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+		<PackageReference Include="System.Linq" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Data\" />
+		<Folder Include="Dll\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Microsoft.Synchronization">
+	    <HintPath>Dll\Microsoft.Synchronization.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Microsoft.Synchronization.Data">
+	    <HintPath>Dll\Microsoft.Synchronization.Data.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Microsoft.Synchronization.Data.SqlServer">
+	    <HintPath>Dll\Microsoft.Synchronization.Data.SqlServer.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+
+</Project>

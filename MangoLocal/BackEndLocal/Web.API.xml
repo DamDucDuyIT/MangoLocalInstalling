@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Web.API</name>
+    </assembly>
+    <members>
+        <member name="T:Web.API.Controllers.AppointmentsController">
+            <summary>
+            ticket, appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetListForScheduleByDate(Application.Models.GetListAppointmentByDateRequest)">
+            <summary>
+            api danh sách appt theo ngày bắt đầu, ngày kết thúc
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.CreateOrUpdate(Application.Models.CreateAppointmentRequest)">
+            <summary>
+             create update appointment với xml
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetAppointmentSchedulerDetail(System.Decimal)">
+            <summary>
+             get appointment scheduler với id
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.CheckIn(System.Decimal)">
+            <summary>
+             CheckIn
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.ChangeAppointmentSchedule(Application.Models.ChangeAppointmentScheduleRequest)">
+            <summary>
+            api confirm kéo thả appointment 
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.SendConfirmSMS(Application.Models.SendConfirmSMSRequest)">
+            <summary>
+            api appointment reminder
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetTodayBookingList(System.DateTime,System.Int32)">
+            <summary>
+            api get today booking list
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetWaitingHistory(System.String)">
+            <summary>
+            api get waiting list
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.NotifyOnlineBooking(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Decimal})">
+            <summary>
+            api notify online booking
+            </summary>
+            <param name="limit">Giới hạn số record query </param>
+            <returns></returns>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetListTickets(Application.Models.RequestModels.AppointmentAppServiceModelReqest.GetListTicketsRequest)">
+            <summary>
+            Get all ticket include APPT tickets and walkin tickets
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetListAppointmentForListView(Application.Models.RequestModels.AppointmentAppServiceModelReqest.ListAppointmentForListViewReqest)">
+            <summary>
+            Get list for list view
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetAppoitemntByClient(System.Decimal,System.Int32)">
+            <summary>
+            Get appointment for search bar in the header
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.ConfirmCopy(Application.Models.RequestModels.AppointmentAppServiceModelReqest.ConfirmCopyAptRequest)">
+            <summary>
+            confirm copy appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetAppointmentServiceDetail(System.Decimal)">
+            <summary>
+            get appointment service detail information
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.AcceptOnlineBooking(Application.Models.RequestModels.AppointmentAppServiceModelReqest.HandleOnlineBookingRequest)">
+            <summary>
+            api comfirm booking
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.DeclineOnlineBooking(Application.Models.RequestModels.AppointmentAppServiceModelReqest.HandleOnlineBookingRequest)">
+            <summary>
+            api Decline Online Booking
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetConfigIsMailIsSMS(System.Decimal,System.String,System.Int32,System.String)">
+            <summary>
+            api get config mail sms
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.CheckTypeEmail(System.Decimal)">
+            <summary>
+            api check type of mail
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.DetailInfoTixSalonPopup(System.Decimal,System.Int32,System.Decimal,System.Int32)">
+            <summary>
+            api get detail information for waiting list item popup
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.StartAService(Application.Models.RequestModels.AppointmentAppServiceModelReqest.StartAServiceRequest)">
+            <summary>
+            api start a service in an appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.ComingUpAppointment(System.Decimal)">
+            <summary>
+            api for like button in the appointment scheduler detail
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.StartAllServices(Application.Models.RequestModels.AppointmentAppServiceModelReqest.StartAllServicesRequest)">
+            <summary>
+            api start all services in an appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.AddServiceOnPopup(Application.Models.RequestModels.AppointmentAppServiceModelReqest.AddServiceOnPopupRequset)">
+            <summary>
+            api add server on popup
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.DoneAService(Application.Models.RequestModels.AppointmentAppServiceModelReqest.DoneAServiceRequest)">
+            <summary>
+            api done a service in an appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.DoneAndActive(Application.Models.RequestModels.AppointmentAppServiceModelReqest.DoneAndActiveRequest)">
+            <summary>
+            api Done All service
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.CancelAppointment(Application.Models.RequestModels.AppointmentAppServiceModelReqest.CancelAppointmentRequest)">
+            <summary>
+            api CancelApt
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.CancelNoShow(Application.Models.RequestModels.AppointmentAppServiceModelReqest.CancelAppointmentRequest)">
+            <summary>
+            api Cancal NoShow
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.UpdateStatusMessage(Application.Models.RequestModels.AppointmentAppServiceModelReqest.UpdateStatusMessageRequest)">
+            <summary>
+            api update status appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.RequestEmployee(System.Decimal,System.Decimal,System.Boolean,System.Int32)">
+            <summary>
+            request employee to service ticket
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.ListStatusMessage(System.Int32,System.Decimal)">
+            <summary>
+            get list waiting status for ticket in salon center
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.CombineTickets(Application.Models.RequestModels.AppointmentAppServiceModelReqest.CombineTicketsRequest)">
+            <summary>
+            Combine tickets together
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.TrackDuration(System.String)">
+            <summary>
+            Combine tickets together
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetServiceDetailForEdit(System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            Get service detail for edit appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.AddCategory(System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Add category vào appt khi client check in tại tiệm (dùng cho client info trong phần create/charge)
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.DeleteCategory(System.Decimal,System.Int32)">
+            <summary>
+            Delete category trong appt khi client check in tại tiệm (dùng cho client info trong phần create/charge)
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.VoidItem(System.String,System.Decimal)">
+            <summary>
+            Xóa service item trong appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.VoidWaitEmployee(System.Decimal,System.Decimal,System.Int32,System.Boolean)">
+            <summary>
+            Xóa employee không chứa service của appointment trong create charge
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetTicketDetailForCheckout(System.Decimal,System.Decimal)">
+            <summary>
+            Get ticket information for check out (load all tickets if they are combinated)
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.AppointmentsController.GetTicketDetailForCheckoutPopup(Application.Models.RequestModels.CheckOutRequest.GetTicketDetailForCheckoutPopupRequest)">
+            <summary>
+            Get tickets detail by ticket for Salon Center popup      
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CategoriesController.GetAll(Application.Models.GetListCategoryRequest)">
+            <summary>
+            danh sách category
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CategoriesController.GetListForCreateAppointment(System.Int64)">
+            <summary>
+            danh sách category cho form thêm appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CategoriesController.GetListForClientCheckin(System.Int32)">
+            <summary>
+            danh sách category cho client khi đến checkin tại tiệm (dùng cho client info trong phần create/charge)
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CategoriesController.GetCheckInApptCateList(System.Decimal,System.Int32)">
+            <summary>
+            danh sách category đã được client chọn khi check in
+            </summary>
+        </member>
+        <member name="T:Web.API.Controllers.CategoryStypesController">
+            <summary>
+            resource: group của category
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CategoryStypesController.GetAll(Application.Models.GetListCategoryStypeRequest)">
+            <summary>
+            danh sách category group
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CheckOutController.Create(Application.Models.RequestModels.CreateChargeCreateRequest)">
+            <summary>
+            Create/charge init
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CheckOutController.GetCheckOutByAppointment(System.Decimal)">
+            <summary>
+            Get check out information of an appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CheckOutController.GetGroupTicket(System.Nullable{System.Decimal})">
+            <summary>
+            Get tickets for combine function if tickets are in group, they will be rendered in one ticket 
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CheckOutController.GetTicketPayment(System.Int64)">
+            <summary>
+            get ticket payment  
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CheckOutController.ActiveSaveTicket(Application.Models.RequestModels.CheckOutRequest.ActiveSaveTicketRequest)">
+            <summary>
+            Check in a ticket in create charge    
+            </summary>
+        </member>
+        <member name="T:Web.API.Controllers.CheckPermissionsController">
+            <summary>
+            permission
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CheckPermissionsController.CheckLoginPermission(Application.Models.CheckLoginPermissionRequest)">
+            <summary>
+            check permission nhân viên cho function
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetListWithFiltering(Application.Models.GetCustomerEditRequest)">
+            <summary>
+            danh sách customer cho việc filter
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.TrackNoShow(System.Decimal)">
+            <summary>
+            kiểm tra bao nhiêu noshow ticket của client
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetClientNote(System.Decimal,System.Boolean)">
+            <summary>
+            get list note của client
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.UpdateNote(Application.Models.UpdateClientNoteRequest)">
+            <summary>
+            update last note cho client
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.FastRegister(Application.Models.FindAndRegCustomerReq)">
+            <summary>
+            đăng kí nhanh customer
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetInfoCustomerForMakeApt(System.Decimal,System.String,System.Nullable{System.Decimal})">
+            <summary>
+            thông tin customer để book apt
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetCustomerMoreInfo(System.Decimal,System.Nullable{System.Int32})">
+            <summary>
+            thông tin customer để show detaill
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetCustomerGallery(System.Decimal,System.Nullable{System.Int32})">
+            <summary>
+            get thư viện ảnh của customer
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetClientTotal(System.Decimal)">
+            <summary>
+            Get client total information for chart in client detail information
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetListFamily(System.Decimal)">
+            <summary>
+            Get list family for client information
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetInfoForCreateCharge(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+            <summary>
+            Chi tiết thông tin client cho create charge
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetForAptSchedulerDetail(System.Int64,System.Int32)">
+            <summary>
+            get client infomation for appointment scheduler detail
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetInformationForCheckoutPopup(Application.Models.RequestModels.CheckOutRequest.GetClientForCheckoutPopupRequest)">
+            <summary>
+            Get tickets info in Salon Center
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.CustomersController.GetListClient(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get all client infomation 
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetListWithDayOff(Application.Models.ListEmployeeWithDayOffRequest)">
+            <summary>
+            danh sách technician with thời gian làm việc
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetWorkingEmployeeList(System.String,System.Nullable{System.Int32},System.String,System.Boolean)">
+            <summary>
+            Danh sách nhân đang còn làm việc tại tiệm
+            (Nếu chọn setting là Ready/Busy cho thuộc tính Show Tech thì sẽ query những nhân viên đã clock - in)
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetListInfoBasic(Application.Models.ListEmployeeInfoBasicRequest)">
+            <summary>
+            danh sách nhân viên - thông tin cơ bản
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetListTimeBookTicketByDate(System.Decimal,System.DateTimeOffset)">
+            <summary>
+            danh sách time có thể book appoint của nhân viên
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.FontTechDescription(System.Int32)">
+            <summary>
+            api get color 
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.ChangeTechOnPopup(System.Int64,System.String,System.Boolean)">
+            <summary>
+            api đổi tech cho service
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.LoginTechEmpClock(System.Decimal)">
+            <summary>
+            api login/out tech
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetPointEarn(System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            api get point earn for employee in check screen
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.HubProcessingRequest(System.String,System.Int32,System.String)">
+            <summary>
+            Hub requset async
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.UpdatePointEarnStatus(System.Decimal,System.Boolean)">
+            <summary>
+            Update PointEarnStatus when click VOID in create/charge
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetListServedByCustomerId(System.Decimal)">
+            <summary>
+            Get danh sách nhân viên đã từng làm dịch vụ cho khách với Id
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.EmployeesController.GetListTimeByDate(System.Decimal,System.DateTime)">
+            <summary>
+            Get danh sách thời gian per15min by employeeId
+            </summary>
+        </member>
+        <member name="T:Web.API.Controllers.PosItemsController">
+            <summary>
+            danh sách Items: dịch vụ, product v.v.
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.PosItemsController.GetListByCategory(System.Int64)">
+            <summary>
+            danh sách by categoryid
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.PosItemsController.GetListDetail(Application.Models.GetListDetailPosItemRequest)">
+            <summary>
+            danh sách item detail with filter
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.PosItemsController.CheckAssignByEmployee(Application.Models.CheckItemAssignByEmployeeRequest)">
+            <summary>
+            check assign item cho nhân viên
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.PosItemsController.AddItemToAppointmentInCheckOut(Application.Models.AddItemToAppointmentInCheckOutRequest)">
+            <summary>
+            Add service in check out screen to appointment
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.PosItemsController.GetListForComboCategory(System.Int64)">
+            <summary>
+            get danh sách item trong category for combo category
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.PosItemsController.GetListForCheckoutByCategory(System.Int64,System.Int32)">
+            <summary>
+            Danh sách item của category trang create/charge    
+            </summary>
+        </member>
+        <member name="T:Web.API.Controllers.RDParasController">
+            <summary>
+            resource: cấu hình
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.RDParasController.GetByName(System.String)">
+            <summary>
+            danh sách setting theo name
+            </summary>
+            <param name="name">danh sách name setting cần lấy, example:AddMoreSalonAppt,TechOrderBook </param>
+            <returns></returns>
+        </member>
+        <member name="M:Web.API.Controllers.RDParasController.GetAppointmentSetting">
+            <summary>
+            setting cho appointment, book
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.RDParasController.GetByGroupName(System.String)">
+            <summary>
+            get setting by list group name: groupname1,groupname2..v.
+            </summary>
+        </member>
+        <member name="T:Web.API.Controllers.ReportController">
+            <summary>
+            terminal
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.ReportController.GetInfoBeforeUnBatch(System.String,System.String,System.String)">
+            <summary>
+            get all information unbatched from TerminalResponse
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.ReportController.QuickBatched(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Get infomation for BatchNow button
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.ReportController.GetAllUnBatched(System.DateTime,System.DateTime,System.String,System.Int32)">
+            <summary>
+            Get all unbatched
+            </summary>
+        </member>
+        <member name="T:Web.API.Controllers.SalonsController">
+            <summary>
+            resource: tiệm
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.SalonsController.GetWeekScheduleByDate(System.DateTimeOffset)">
+            <summary>
+            danh sách lịch làm việc của tiệm theo tuần
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.SalonsController.GetSessionInfo">
+            <summary>
+            Thông tin ban đầu: rvc, permission..v.v.
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.SalonsController.UpdateGlobPara(System.String,System.String)">
+            <summary>
+            Update salon global para
+            </summary>
+        </member>
+        <member name="M:Web.API.Controllers.SyncController.Initialize">
+            <summary>
+            Khởi chạy sync lần đầu: tự động tạo tracking table, store procedure, v.v...
+            </summary>
+        </member>
+    </members>
+</doc>
